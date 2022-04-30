@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:weekly_scheduler/provider/scheduling_provider.dart';
 import 'package:weekly_scheduler/screens/landing_page.dart';
 import 'package:weekly_scheduler/util/app_routes.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider<SchedulingProvider>(
+            create: (_) => SchedulingProvider()),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {

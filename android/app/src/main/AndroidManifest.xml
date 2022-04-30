@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.weekly_scheduler">
    <application
-        android:label="weekly_scheduler"
+        android:label="Weekly Scheduler"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
